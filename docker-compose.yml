@@ -4,6 +4,8 @@ services:
     restart: always
     build: .
     container_name: 'python392'
+    ports: 
+      - 8888:8888
     working_dir: '/root/'
     tty: true
     volumes:
