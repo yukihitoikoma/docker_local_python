@@ -12,4 +12,4 @@ services:
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
       - ${PWD}/opt:/home/ikoma/workspaces/
-    working_dir: '/home/ikoma/workspaces/'
+    working_dir: /home/ikoma/workspaces/
