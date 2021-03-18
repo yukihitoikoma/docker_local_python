@@ -2,11 +2,14 @@ version: '3'
 services:
   python3:
     restart: always
+    user: "${UID}:${GID}"
     build: .
     container_name: 'python392'
     ports: 
       - 8888:8888
-    working_dir: '/root/'
     tty: true
     volumes:
-      - ./opt:/root/opt
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+      - ${PWD}/opt:/home/ikoma/workspaces/
+    working_dir: '/home/ikoma/workspaces/'
