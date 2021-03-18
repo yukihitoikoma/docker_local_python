@@ -14,3 +14,4 @@ ADD ./ /root/
 RUN apt-get install -y vim less git
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
+RUN echo "alias jpt_lab='jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root'" >> /root/.bashrc
